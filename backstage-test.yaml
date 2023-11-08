@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: backstage-test-github
+  description: pruebita para añadir un componente
+  annotations:
+    example.com/service-discovery: artistweb
+    circleci.com/project-slug: github/example-org/artist-website
+  tags:
+    - javascript
+spec:
+  type: service
+  lifecycle: production
+  owner: UnaBananaPocha
