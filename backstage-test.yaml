@@ -12,4 +12,5 @@ spec:
   type: service
   lifecycle: production
   owner: UnaBananaPocha
-  definition: this is a definition
+  definition: |
+    $text: https://petstore.swagger.io/v2/swagger.json
