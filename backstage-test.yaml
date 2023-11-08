@@ -13,4 +13,4 @@ spec:
   lifecycle: production
   owner: UnaBananaPocha
   definition:
-    $text: https://petstore.swagger.io/v2/swagger.json
+    $text: https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore.yaml
