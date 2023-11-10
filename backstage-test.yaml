@@ -15,9 +15,9 @@ spec:
   definition:
     $text: https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore.yaml
 
-techdocs:
-  generator:
-    runIn: 'local'
-  builder: 'local'
-  publisher:
-    type: 'local'
+#techdocs:
+#  generator:
+#    runIn: 'local'
+#  builder: 'local'
+#  publisher:
+#    type: 'local'
