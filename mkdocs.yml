@@ -1,5 +1,5 @@
-site_name: ${{values.component_id}}
-site_description: ${{values.description}}
+site_name: Backstage Test
+site_description: Componente de prueba para añadir en backstage
 
 nav:
   - Introduction: index.md
