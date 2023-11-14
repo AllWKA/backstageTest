@@ -2,8 +2,8 @@ site_name: Backstage Test
 site_description: Componente de prueba para añadir en backstage
 
 nav:
-  - First Index: index.md
-  - Second Index: otherIndex.md
+  - Primer Índice: index.md
+  - Descripción: otherIndex.md
 
 plugins:
   - techdocs-core
