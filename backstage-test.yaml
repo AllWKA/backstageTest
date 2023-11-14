@@ -6,7 +6,7 @@ metadata:
   annotations:
     example.com/service-discovery: artistweb
     circleci.com/project-slug: github/example-org/artist-website
-    backstage.io/techdocs-ref: dir:.
+#    backstage.io/techdocs-ref: dir:.
   tags:
     - javascript
 spec:
@@ -15,8 +15,3 @@ spec:
   owner: UnaBananaPocha
   definition:
     $text: https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore.yaml
-
-#techdocs:
-#  builder: 'local'
-#  publisher:
-#    type: 'local'
