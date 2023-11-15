@@ -3,6 +3,5 @@ site_description: Componente de prueba para añadir en backstage
 
 nav:
   - Introduction: index.md
-  - Description: ../README.md
 plugins:
   - techdocs-core
