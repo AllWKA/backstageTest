@@ -9,7 +9,7 @@ metadata:
     backstage.io/techdocs-ref: dir:.
   tags:
     - javascript
-  newMetadataTest: This is the new metadata
+#  newMetadataTest: This is the new metadata
 spec:
   type: service
   lifecycle: production
