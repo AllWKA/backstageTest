@@ -1,9 +1,18 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: API
 metadata:
   name: backstage-test-github
   description: pruebita para añadir un componente
+  annotations:
+    example.com/service-discovery: artistweb
+    circleci.com/project-slug: github/example-org/artist-website
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - javascript
+#  newMetadataTest: This is the new metadata
 spec:
-  type: website
-  lifecycle: experimental
-  owner: artist-relations-team
+  type: service
+  lifecycle: production
+  owner: UnaBananaPocha
+  definition:
+    $text: https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore.yaml
