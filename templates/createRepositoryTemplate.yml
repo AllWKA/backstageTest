@@ -1,0 +1,52 @@
+# Notice the v1beta3 version
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+# some metadata about the template itself
+metadata:
+  name: template-test
+  title: Template test for bitbucket fork
+  description: Template used to fork a repository in Bitbucket Cloud
+spec:
+  owner: LABS
+  type: service
+
+  # these are the steps which are rendered in the frontend with the form input
+  parameters:
+    - title: Try to Fork
+      required:
+        - workspace
+        - repo_slug
+      properties:
+        workspace:
+          title: Workspace
+          type: string
+          description: Nombre del workspace donde se encuentra el repositorio
+          ui:autofocus: true
+
+        repo_slug:
+          title: Repo Slug
+          type: string
+          description: Version acortada del repositorio, e.g. backendappp
+          ui:autofocus: true
+
+        project_key:
+          title: Clave del proyecto
+          type: string
+          description: Clave del proyecto donde se quiere alojar el repositorio, e.g. AEAB
+          ui:autofocus: true
+
+
+  # here's the steps that are executed in series in the scaffolder backend
+  steps:
+    - id: bb-repo-create
+      name: create repository
+      action: aeab:repository:create
+      input:
+        workspace: ${{ parameters.workspace }}
+        repo_slug: ${{ parameters.repo_slug }}
+        project_key: ${{parameters.project_key}}
+
+  # some outputs which are saved along with the job for use in the frontend
+  output:
+    url: ${{ steps['bb-repo-create'].output.response }}
+
